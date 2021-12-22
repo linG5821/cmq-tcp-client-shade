@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.ling</groupId>
   <artifactId>cmq-tcp-client-shade</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.1.4-SNAPSHOT</version>
   <build>
     <plugins>
       <plugin>
@@ -40,11 +40,12 @@
     </repository>
   </distributionManagement>
   <properties>
-    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
-    <java.version>1.8</java.version>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <maven.compiler.target>${java.version}</maven.compiler.target>
     <project.encoding>UTF-8</project.encoding>
+    <java.version>1.8</java.version>
+    <maven.compiler.source>${java.version}</maven.compiler.source>
+    <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+    <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
+    <cmq-tcp.version>1.1.4</cmq-tcp.version>
   </properties>
 </project>

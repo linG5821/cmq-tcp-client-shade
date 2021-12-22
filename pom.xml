@@ -6,26 +6,31 @@
 
     <groupId>com.ling</groupId>
     <artifactId>cmq-tcp-client-shade</artifactId>
-    <version>1.1.1-SNAPSHOT</version>
+    <version>1.1.4-SNAPSHOT</version>
 
     <properties>
         <java.version>1.8</java.version>
         <project.encoding>UTF-8</project.encoding>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+        <project.build.sourceEncoding>${project.encoding}</project.build.sourceEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.compilerVersion>${java.version}</maven.compiler.compilerVersion>
+        <cmq-tcp.version>1.1.4</cmq-tcp.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>com.qcloud</groupId>
             <artifactId>cmq-tcp-client</artifactId>
-            <version>1.1.1</version>
+            <version>${cmq-tcp.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>log4j</artifactId>
+                    <groupId>log4j</groupId>
                 </exclusion>
             </exclusions>
         </dependency>
